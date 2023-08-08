@@ -1,0 +1,13 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+.navbar{
+    background-color: #4477CE;
+}
+
+footer{
+    background-color: #4477CE;
+    color: #fff;
+}
