@@ -85,7 +85,11 @@
                     @enderror
                 </div>
                 <div class="mb-3">
-                    <label for="pembayaran" class="form-label">Unggah bukti pembayaran (PNG, JPG, JPEG, PDF)</label>
+                    <label for="pembayaran" class="form-label">Unggah bukti pembayaran (PNG, JPG, JPEG, PDF)
+                        <a class="text-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                            Tarif Pembayaran
+                        </a>
+                    </label>
                     <input class="form-control @error('pembayaran') is-invalid @enderror" type="file" id="pembayaran"
                         name="pembayaran">
                     @error('pembayaran')
@@ -94,19 +98,170 @@
                         </div>
                     @enderror
                 </div>
+                <!-- Modal -->
+                <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                    aria-hidden="true">
+                    <div class="modal-dialog modal-xl">
+                        <div class="modal-content ">
+                            <div class="modal-header">
+                                <h1 class="modal-title fs-5" id="exampleModalLabel">Modal Tarif Pembayaran</h1>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                    aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <p>No Rekening (BSI) :</p>
+                                <p>2002060804 A.n Mifzal</p>
+                                <table class="table table-striped">
+                                    <thead>
+                                        <tr>
+                                            <th scope="col">No</th>
+                                            <th scope="col">Nama Tarif</th>
+                                            <th scope="col">Satuan</th>
+                                            <th scope="col">Tarif</th>
+                                            <th scope="col">Waktu</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <th colspan="5" class="text-center bg-primary text-white">INFROMASI
+                                                METEOROLOGI, KLIMATOLOGI DAN GEOFISIKA</th>
+                                        </tr>
+                                        <tr>
+                                            <th>1</th>
+                                            <td>Analisis dan Prakiraan Hujan Bulanan</td>
+                                            <td>per buku</td>
+                                            <td>Rp. 65.000</td>
+                                            <td>3 Hari</td>
+                                        </tr>
+                                        <tr>
+                                            <th>2</th>
+                                            <td>Prakiraan Musim Kemarau</td>
+                                            <td>per buku</td>
+                                            <td>Rp. 230.000</td>
+                                            <td>3 Hari</td>
+                                        </tr>
+                                        <tr>
+                                            <th>3</th>
+                                            <td>Prakiraan Musim Hujan</td>
+                                            <td>per buku</td>
+                                            <td>Rp. 230.000</td>
+                                            <td>3 Hari</td>
+                                        </tr>
+                                        <tr>
+                                            <th>4</th>
+                                            <td>Atlas Normal Temperatur Priode 1981-2010</td>
+                                            <td>per buku</td>
+                                            <td>Rp. 1.500.000</td>
+                                            <td>5 Hari</td>
+                                        </tr>
+                                        <tr>
+                                            <th>5</th>
+                                            <td>Atlas Potensi Rawan Banjir</td>
+                                            <td>per Atlas</td>
+                                            <td>Rp. 350.000</td>
+                                            <td>3 Hari</td>
+                                        </tr>
+                                        <tr>
+                                            <th>6</th>
+                                            <td>Atlas WindRose Wilayah Indonesia Priode 1981-2010</td>
+                                            <td>per Buku</td>
+                                            <td>Rp. 1.500.000</td>
+                                            <td>5 Hari</td>
+                                        </tr>
+                                        <tr>
+                                            <th>7</th>
+                                            <td>Publikasi Berupa Informasi Perubahan Iklim dan Kualitas Udara</td>
+                                            <td>per Buku</td>
+                                            <td>Rp. 100.000</td>
+                                            <td>3 Hari</td>
+                                        </tr>
+                                        <tr>
+                                            <th>8</th>
+                                            <td>Atlas Kerentanan Perubahan Iklim</td>
+                                            <td>per Atlas</td>
+                                            <td>Rp. 450.000</td>
+                                            <td>3 Hari</td>
+                                        </tr>
+                                        <tr>
+                                            <th>9</th>
+                                            <td>Atlas Potensi Energi Matahari di Indonesia</td>
+                                            <td>per Atlas</td>
+                                            <td>Rp. 300.000</td>
+                                            <td>3 Hari</td>
+                                        </tr>
+                                        <tr>
+                                            <th>10</th>
+                                            <td>Atlas Potensi Energi Angin di Indonesia</td>
+                                            <td>per Atlas</td>
+                                            <td>Rp. 300.000</td>
+                                            <td>3 Hari</td>
+                                        </tr>
+                                        <tr>
+                                            <th>11</th>
+                                            <td>Informasi Particulate Matter(PM) - 10</td>
+                                            <td>per stasiun/tahun</td>
+                                            <td>Rp. 70.000</td>
+                                            <td>3 Hari</td>
+                                        </tr>
+                                        <tr>
+                                            <th>12</th>
+                                            <td>Informasi Meteorologi Untuk Keperluan Klaim Asuransi</td>
+                                            <td>per lokasi/hari</td>
+                                            <td>Rp. 185.000</td>
+                                            <td>3 Hari</td>
+                                        </tr>
+                                        <tr>
+                                            <th>13</th>
+                                            <td>Peta Tingkat Kerawanan Petir</td>
+                                            <td>per lokasi/tahun</td>
+                                            <td>Rp. 200.000</td>
+                                            <td>3 Hari</td>
+                                        </tr>
+                                        <tr>
+                                            <th>14</th>
+                                            <td>Informasi Meteorologi Khusus Untuk Pendukung Kegiatan Proyek, Survei, dan
+                                                Penelitian Komersil</td>
+                                            <td>per lokasi</td>
+                                            <td>Rp. 3.750.000</td>
+                                            <td>5 Hari</td>
+                                        </tr>
+                                        <tr>
+                                            <th colspan="5" class="text-center bg-success text-white">INFROMASI
+                                               KHUSUS METEOROLOGI, KLIMATOLOGI DAN GEOFISIKA SESUAI PERMINTAAN</th>
+                                        </tr>
+                                        <tr>
+                                            <th>15</th>
+                                            <td>Analisis Iklim</td>
+                                            <td>per lokasi</td>
+                                            <td>Rp. 9.500.000</td>
+                                            <td>5 Hari</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                {{-- end modal --}}
                 <div class="row">
                     <div class="col">
                         <div class="mb-3">
                             <label for="nama" class="form-label">Nama Lengkap Sesuai KTP</label>
-                            <input type="name" class="form-control" id="nama" placeholder="Anton" name="name">
+                            <input type="name" class="form-control" id="nama" placeholder="Anton"
+                                name="name">
                         </div>
                         <div class="mb-3">
                             <label for="email" class="form-label">Email Pemohon</label>
-                            <input type="email" class="form-control" id="email" placeholder="Email" name="email">
+                            <input type="email" class="form-control" id="email" placeholder="Email"
+                                name="email">
                         </div>
                         <div class="mb-3">
                             <label for="alamat" class="form-label">Alamat</label>
-                            <input type="name" class="form-control" id="alamat" placeholder="Alamat" name="alamat">
+                            <input type="name" class="form-control" id="alamat" placeholder="Alamat"
+                                name="alamat">
                         </div>
                         <div class="mb-3">
                             <label for="peroleh" class="form-label">Pilih Cara Perolehan Data</label>
